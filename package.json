@@ -32,6 +32,8 @@
     "karma-nyan-reporter": "^0.2.5",
     "karma-webpack": "^2.0.3",
     "mocha": "^3.4.2",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
     "webpack": "^2.6.1",
     "webpack-bundle-size-analyzer": "^2.7.0"
   },
@@ -47,7 +49,9 @@
     "url": "https://github.com/sljavi/react-speech-recognition-status.git"
   },
   "dependencies": {
-    "classnames": "^2.2.5",
+    "classnames": "^2.2.5"
+  },
+  "peerDependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   }

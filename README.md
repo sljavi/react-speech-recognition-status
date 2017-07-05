@@ -13,7 +13,13 @@ npm install react-speech-recognition-status
 ```
 
 ## Requirements
-`react`, `react-dom` and `font-awesome` have be installed
+
+### NPM modules
+- `react@15`
+- `react-dom@15`
+
+### Styles
+- `font-awesome` has to be loaded
 
 ## Usage
 
