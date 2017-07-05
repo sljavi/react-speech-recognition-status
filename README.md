@@ -36,15 +36,9 @@ const SpeechRecognitionStatusComponent = <SpeechRecognitionStatus
 
 ## Supported Options
 
-`contextName(string)`: Displays a label at the left of the transcription
-
-`error(bool)`: When is `true` displays an error icon
-
-`connecting(bool)`: When is `true` displays a connecting icon
-
-`recording(bool)`: When is `true` displays a mic icon
-
-`final(bool)`: When is `true` adds a classname `'final'` to the text container
-
-`text(string)`: Displays the given transcription into the text container
-
+- `contextName(string)`: Displays a label at the left of the transcription
+- `error(bool)`: When is `true` displays an error icon
+- `connecting(bool)`: When is `true` displays a connecting icon
+- `recording(bool)`: When is `true` displays a mic icon
+- `final(bool)`: When is `true` adds a classname `'final'` to the text container
+- `text(string)`: Displays the given transcription into the text container
