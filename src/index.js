@@ -1,5 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
+import './style.scss';
 
 export default class SpeechRecognitionStatus extends React.Component {
   static propTypes = {
