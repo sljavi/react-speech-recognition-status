@@ -1,7 +1,7 @@
 {
   "name": "react-speech-recognition-status",
   "description": "React component useful to display the speech recognition status",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "scripts": {
     "lint": "eslint ./src ./tests",
