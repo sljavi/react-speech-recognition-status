@@ -1,0 +1,220 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`speech recognition status component should render add the class final to the text speech 1`] = `
+<div
+  className="speech-recognition-status expanded"
+>
+  <div
+    className="status"
+  >
+    <div
+      className="speech"
+    >
+      <span
+        className="current-speech final"
+      >
+        foo
+      </span>
+    </div>
+    <span
+      className="status-icon-container"
+    >
+      <i
+        className="fa fa-fw fa-microphone"
+      />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`speech recognition status component should render compact view 1`] = `
+<div
+  className="speech-recognition-status compact"
+>
+  <span
+    className="status-icon-container"
+  >
+    <i
+      className="fa fa-fw fa-microphone"
+    />
+  </span>
+  <span
+    className="status-details"
+  >
+    <span
+      className="current-speech"
+    >
+      foo
+    </span>
+  </span>
+</div>
+`;
+
+exports[`speech recognition status component should render connecting icon 1`] = `
+<div
+  className="speech-recognition-status expanded"
+>
+  <div
+    className="status"
+  >
+    <div
+      className="speech"
+    >
+      <span
+        className="current-speech"
+      >
+        foo
+      </span>
+    </div>
+    <span
+      className="status-icon-container"
+    >
+      <i
+        className="fa fa-fw fa-refresh fa-spin"
+      />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`speech recognition status component should render error icon 1`] = `
+<div
+  className="speech-recognition-status expanded"
+>
+  <div
+    className="status"
+  >
+    <div
+      className="speech"
+    >
+      <span
+        className="current-speech"
+      >
+        foo
+      </span>
+    </div>
+    <span
+      className="status-icon-container"
+    >
+      <i
+        className="fa fa-fw fa-exclamation-circle fa-microphone"
+      />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`speech recognition status component should render mute icon 1`] = `
+<div
+  className="speech-recognition-status expanded"
+>
+  <div
+    className="status"
+  >
+    <div
+      className="speech"
+    >
+      <span
+        className="current-speech"
+      >
+        foo
+      </span>
+    </div>
+    <span
+      className="status-icon-container"
+    >
+      <i
+        className="fa fa-fw fa-microphone-slash"
+      />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`speech recognition status component should render recording icon 1`] = `
+<div
+  className="speech-recognition-status expanded"
+>
+  <div
+    className="status"
+  >
+    <div
+      className="speech"
+    >
+      <span
+        className="current-speech"
+      >
+        foo
+      </span>
+    </div>
+    <span
+      className="status-icon-container"
+    >
+      <i
+        className="fa fa-fw fa-microphone"
+      />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`speech recognition status component should render the context name when is set 1`] = `
+<div
+  className="speech-recognition-status expanded"
+>
+  <div
+    className="status"
+  >
+    <div
+      className="speech"
+    >
+      <span
+        className="context"
+      >
+        <span>
+          bar
+        </span>
+      </span>
+      <span
+        className="current-speech"
+      >
+        foo
+      </span>
+    </div>
+    <span
+      className="status-icon-container"
+    >
+      <i
+        className="fa fa-fw fa-microphone"
+      />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`speech recognition status component should render without throwing an error 1`] = `
+<div
+  className="speech-recognition-status expanded"
+>
+  <div
+    className="status"
+  >
+    <div
+      className="speech"
+    >
+      <span
+        className="current-speech"
+      >
+        foo
+      </span>
+    </div>
+    <span
+      className="status-icon-container"
+    >
+      <i
+        className="fa fa-fw fa-microphone"
+      />
+    </span>
+  </div>
+</div>
+`;

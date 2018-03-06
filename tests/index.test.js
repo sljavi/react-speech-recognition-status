@@ -1,4 +1,5 @@
 import React from 'react';
+import renderer from 'react-test-renderer';
 import ReactTestUtils from 'react-dom/test-utils';
 import ReactDOM from 'react-dom';
 import SpeechRecognitionStatus from './../src/index';
@@ -15,42 +16,33 @@ const defaultProps = {
 
 function render(props = {}) {
   const updatedProps = {...defaultProps, ...props};
-  const component = ReactTestUtils.renderIntoDocument(<SpeechRecognitionStatus {...updatedProps}/>);
-  return ReactDOM.findDOMNode(component);
+  return renderer
+    .create(<SpeechRecognitionStatus {...updatedProps}/>)
+    .toJSON();
 }
 
 describe('speech recognition status component', () => {
   it('should render without throwing an error', function() {
     const el = render();
-    expect(el.className).to.equal('speech-recognition-status');
+    expect(el).toMatchSnapshot();
   });
 
   it('should render the context name when is set', function() {
-    let el = render();
-    expect(el.querySelector('.context')).to.equal(null);
-    el = render({
+    const el = render({
       contextName: 'bar'
     });
-    expect(el.querySelector('.context').innerText).to.equal('bar');
-  });
-
-  it('should render the speech when is set', function() {
-    let el = render();
-    expect(el.querySelector('.current-speech').innerText).to.equal('foo');
+    expect(el).toMatchSnapshot();
   });
 
   it('should render add the class final to the text speech', function() {
-    let el = render();
-    expect(el.querySelector('.current-speech.final')).to.equal(null);
-
-    el = render({
+    const el = render({
       error: '',
       connecting: false,
       recording: true,
       final: true,
     });
 
-    expect(el.querySelector('.current-speech.final').innerText).to.equal('foo');
+    expect(el).toMatchSnapshot();
   });
 
   it('should render connecting icon', function() {
@@ -61,7 +53,7 @@ describe('speech recognition status component', () => {
       final: false
     });
 
-    expect(_.isElement(el.querySelector('.fa-refresh.fa-spin'))).to.equal(true);
+    expect(el).toMatchSnapshot();
   });
 
   it('should render error icon', function() {
@@ -72,7 +64,7 @@ describe('speech recognition status component', () => {
       final: false
     });
 
-    expect(_.isElement(el.querySelector('.fa-exclamation-circle'))).to.equal(true);
+    expect(el).toMatchSnapshot();
   });
 
   it('should render recording icon', function() {
@@ -83,7 +75,7 @@ describe('speech recognition status component', () => {
       final: false
     });
 
-    expect(_.isElement(el.querySelector('.fa-microphone'))).to.equal(true);
+    expect(el).toMatchSnapshot();
   });
 
   it('should render mute icon', function() {
@@ -94,7 +86,15 @@ describe('speech recognition status component', () => {
       final: false
     });
 
-    expect(_.isElement(el.querySelector('.fa-microphone-slash'))).to.equal(true);
+    expect(el).toMatchSnapshot();
+  });
+
+  it('should render compact view', function() {
+    const el = render({
+      compact: true
+    });
+
+    expect(el).toMatchSnapshot();
   });
 
 });

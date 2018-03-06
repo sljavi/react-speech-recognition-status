@@ -15,8 +15,9 @@ npm install react-speech-recognition-status
 ## Requirements
 
 ### NPM modules
-- `react@15`
-- `react-dom@15`
+- `>=react@15`
+- `>=react-dom@15`
+- `>=prop-types@15`
 
 ### Styles
 - `font-awesome` has to be loaded
@@ -42,3 +43,5 @@ const SpeechRecognitionStatusComponent = <SpeechRecognitionStatus
 - `recording(bool)`: When is `true` displays a mic icon
 - `final(bool)`: When is `true` adds a classname `'final'` to the text container
 - `text(string)`: Displays the given transcription into the text container
+- `compact(bool)`: When is `true` displays compacted version
+
