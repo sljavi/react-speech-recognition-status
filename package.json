@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint ./src ./tests",
     "build": "webpack --progress",
-    "test": "NODE_ENV=testing jest --coverage --ci --runInBand",
+    "test": "NODE_ENV=testing jest --coverage --ci --runInBand && cat ./coverage/lcov.info | coveralls",
     "test:dev": "NODE_ENV=testing jest --watch",
     "profile": "webpack --json | webpack-bundle-size-analyzer"
   },
@@ -20,6 +20,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "chai": "^4.0.2",
+    "coveralls": "^3.0.0",
     "css-loader": "^0.28.10",
     "eslint": "1.7.x",
     "eslint-plugin-babel": "2.x.x",
@@ -59,6 +60,8 @@
     "moduleNameMapper": {
       "\\.(css|less|scss)$": "identity-obj-proxy"
     },
-    "moduleFileExtensions": ["js"]
+    "moduleFileExtensions": [
+      "js"
+    ]
   }
 }
