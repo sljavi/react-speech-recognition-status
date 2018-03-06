@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint ./src ./tests",
     "build": "webpack --progress",
-    "test": "NODE_ENV=testing jest --coverage --ci <--runInBand></--runInBand>",
+    "test": "NODE_ENV=testing jest --coverage --ci --runInBand",
     "test:dev": "NODE_ENV=testing jest --watch",
     "profile": "webpack --json | webpack-bundle-size-analyzer"
   },
@@ -23,6 +23,7 @@
     "css-loader": "^0.28.10",
     "eslint": "1.7.x",
     "eslint-plugin-babel": "2.x.x",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^22.4.2",
     "node-sass": "^4.7.2",
     "prop-types": "^15.6.1",
@@ -53,5 +54,11 @@
     "react": ">=15.x.x",
     "react-dom": ">=15.x.x",
     "prop-types": ">=15.x.x"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|less|scss)$": "identity-obj-proxy"
+    },
+    "moduleFileExtensions": ["js"]
   }
 }
