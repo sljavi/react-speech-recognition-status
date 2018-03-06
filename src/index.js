@@ -70,6 +70,6 @@ export default class SpeechRecognitionStatus extends React.Component {
   }
 
   render() {
-    return this.props.compact ? this.renderCompactMode() : this.renderExpandedMode()
+    return this.props.compact ? this.renderCompactMode() : this.renderExpandedMode();
   }
 }
