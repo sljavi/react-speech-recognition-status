@@ -39,7 +39,7 @@ exports[`speech recognition status component should render compact view 1`] = `
     />
   </span>
   <span
-    className="status-details"
+    className="status-details without-context"
   >
     <span
       className="current-speech"

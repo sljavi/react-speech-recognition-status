@@ -1,11 +1,11 @@
 {
   "name": "react-speech-recognition-status",
   "description": "React component useful to display the speech recognition status",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "license": "MIT",
   "scripts": {
     "lint": "eslint ./src ./tests",
-    "build": "webpack --progress",
+    "build": "webpack -p --progress",
     "test": "NODE_ENV=testing jest --coverage --ci --runInBand && cat ./coverage/lcov.info | coveralls",
     "test:dev": "NODE_ENV=testing jest --watch",
     "profile": "webpack --json | webpack-bundle-size-analyzer"
@@ -24,6 +24,7 @@
     "css-loader": "^0.28.10",
     "eslint": "1.7.x",
     "eslint-plugin-babel": "2.x.x",
+    "eslint-plugin-react": "^7.7.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^22.4.2",
     "node-sass": "^4.7.2",

@@ -58,10 +58,13 @@ export default class SpeechRecognitionStatus extends React.Component {
   }
 
   renderCompactMode = () => {
+    const classes = classnames('status-details', {
+      'without-context': !this.props.contextName
+    });
     return (
       <div className='speech-recognition-status compact'>
         {this.speechRecognitionIcon()}
-        <span className='status-details'>
+        <span className={classes}>
           {this.speechRecognitionContext()}
           {(this.props.contextName || this.props.text) && this.speechRecognitionText()}
         </span>
