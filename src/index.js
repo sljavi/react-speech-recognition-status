@@ -11,6 +11,7 @@ export default class SpeechRecognitionStatus extends React.Component {
     recording: PropTypes.bool.isRequired,
     final: PropTypes.bool.isRequired,
     text: PropTypes.string.isRequired,
+    volume: PropTypes.number,
     compact: PropTypes.bool
   }
 
@@ -29,16 +30,26 @@ export default class SpeechRecognitionStatus extends React.Component {
     );
   }
 
+  getVolumeLevel = () => {
+    return Math.floor(this.props.volume);
+  }
+
   speechRecognitionIcon = () => {
+    let style = {};
     const speechRecognizerStateIcon = classnames('fa', 'fa-fw', {
       'fa-refresh fa-spin': this.props.connecting,
       'fa-exclamation-circle': this.props.error,
-      'fa-microphone': this.props.recording,
+      'fa-microphone volume': this.props.recording,
       'fa-microphone-slash': !(this.props.connecting || this.props.error || this.props.recording)
     });
+    if (this.props.recording && 'volume' in this.props) {
+      const volume = this.getVolumeLevel();
+      const background = `linear-gradient(to top, #333333 ${volume}%, #CCCCCC ${volume}%)`;
+      style = { background }
+    }
     return (
       <span className='status-icon-container'>
-        <i className={speechRecognizerStateIcon}/>
+        <i className={speechRecognizerStateIcon} style={style}/>
       </span>
     );
   }

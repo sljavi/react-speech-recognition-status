@@ -44,4 +44,5 @@ const SpeechRecognitionStatusComponent = <SpeechRecognitionStatus
 - `final(bool)`: When is `true` adds a classname `'final'` to the text container
 - `text(string)`: Displays the given transcription into the text container
 - `compact(bool)`: When is `true` displays compacted version
+- `volume(number)`: When `recording` is `true` the mic icon shows the volume level
 

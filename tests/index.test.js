@@ -78,6 +78,18 @@ describe('speech recognition status component', () => {
     expect(el).toMatchSnapshot();
   });
 
+  it('should render recording icon with volume level', function() {
+    const el = render({
+      error: '',
+      connecting: false,
+      recording: true,
+      final: false,
+      volume: 70
+    });
+
+    expect(el).toMatchSnapshot();
+  });
+
   it('should render mute icon', function() {
     const el = render({
       error: '',

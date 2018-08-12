@@ -20,7 +20,8 @@ exports[`speech recognition status component should render add the class final t
       className="status-icon-container"
     >
       <i
-        className="fa fa-fw fa-microphone"
+        className="fa fa-fw fa-microphone volume"
+        style={Object {}}
       />
     </span>
   </div>
@@ -35,7 +36,8 @@ exports[`speech recognition status component should render compact view 1`] = `
     className="status-icon-container"
   >
     <i
-      className="fa fa-fw fa-microphone"
+      className="fa fa-fw fa-microphone volume"
+      style={Object {}}
     />
   </span>
   <span
@@ -71,6 +73,7 @@ exports[`speech recognition status component should render connecting icon 1`] =
     >
       <i
         className="fa fa-fw fa-refresh fa-spin"
+        style={Object {}}
       />
     </span>
   </div>
@@ -97,7 +100,8 @@ exports[`speech recognition status component should render error icon 1`] = `
       className="status-icon-container"
     >
       <i
-        className="fa fa-fw fa-exclamation-circle fa-microphone"
+        className="fa fa-fw fa-exclamation-circle fa-microphone volume"
+        style={Object {}}
       />
     </span>
   </div>
@@ -125,6 +129,7 @@ exports[`speech recognition status component should render mute icon 1`] = `
     >
       <i
         className="fa fa-fw fa-microphone-slash"
+        style={Object {}}
       />
     </span>
   </div>
@@ -151,7 +156,40 @@ exports[`speech recognition status component should render recording icon 1`] = 
       className="status-icon-container"
     >
       <i
-        className="fa fa-fw fa-microphone"
+        className="fa fa-fw fa-microphone volume"
+        style={Object {}}
+      />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`speech recognition status component should render recording icon with volume level 1`] = `
+<div
+  className="speech-recognition-status expanded"
+>
+  <div
+    className="status"
+  >
+    <div
+      className="speech"
+    >
+      <span
+        className="current-speech"
+      >
+        foo
+      </span>
+    </div>
+    <span
+      className="status-icon-container"
+    >
+      <i
+        className="fa fa-fw fa-microphone volume"
+        style={
+          Object {
+            "background": "linear-gradient(to top, #333333 70%, #CCCCCC 70%)",
+          }
+        }
       />
     </span>
   </div>
@@ -185,7 +223,8 @@ exports[`speech recognition status component should render the context name when
       className="status-icon-container"
     >
       <i
-        className="fa fa-fw fa-microphone"
+        className="fa fa-fw fa-microphone volume"
+        style={Object {}}
       />
     </span>
   </div>
@@ -212,7 +251,8 @@ exports[`speech recognition status component should render without throwing an e
       className="status-icon-container"
     >
       <i
-        className="fa fa-fw fa-microphone"
+        className="fa fa-fw fa-microphone volume"
+        style={Object {}}
       />
     </span>
   </div>
