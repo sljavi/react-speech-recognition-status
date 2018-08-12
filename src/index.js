@@ -45,7 +45,7 @@ export default class SpeechRecognitionStatus extends React.Component {
     if (this.props.recording && 'volume' in this.props) {
       const volume = this.getVolumeLevel();
       const background = `linear-gradient(to top, #333333 ${volume}%, #CCCCCC ${volume}%)`;
-      style = { background }
+      style = { background };
     }
     return (
       <span className='status-icon-container'>
