@@ -196,6 +196,33 @@ exports[`speech recognition status component should render recording icon with v
 </div>
 `;
 
+exports[`speech recognition status component should render sleeping compact view 1`] = `
+<div
+  className="speech-recognition-status compact"
+>
+  <span
+    className="status-icon-container sleeping"
+  >
+    <i
+      className="fa fa-fw fa-microphone"
+    />
+    <span
+      className="first"
+    >
+      z
+    </span>
+    <span
+      className="second"
+    >
+      z
+    </span>
+  </span>
+  <span
+    className="status-details without-context"
+  />
+</div>
+`;
+
 exports[`speech recognition status component should render the context name when is set 1`] = `
 <div
   className="speech-recognition-status expanded"

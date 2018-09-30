@@ -12,11 +12,12 @@ export default class SpeechRecognitionStatus extends React.Component {
     final: PropTypes.bool.isRequired,
     text: PropTypes.string.isRequired,
     volume: PropTypes.number,
+    sleeping: PropTypes.bool.isRequired,
     compact: PropTypes.bool
   }
 
   speechRecognitionContext = () => {
-    if (this.props.contextName) {
+    if (this.props.contextName && !this.props.sleeping) {
       return (
         <span className='context'><span>{this.props.contextName}</span></span>
       );
@@ -34,7 +35,21 @@ export default class SpeechRecognitionStatus extends React.Component {
     return Math.floor(this.props.volume);
   }
 
+  renderSleepingIcon = () => {
+    return (
+      <span className='status-icon-container sleeping'>
+        <i className='fa fa-fw fa-microphone' />
+        <span className='first'>z</span>
+        <span className='second'>z</span>
+      </span>
+    );
+  }
+
   speechRecognitionIcon = () => {
+    if (this.props.sleeping) {
+      return this.renderSleepingIcon();
+    }
+
     let style = {};
     const speechRecognizerStateIcon = classnames('fa', 'fa-fw', {
       'fa-refresh fa-spin': this.props.connecting,
@@ -49,7 +64,7 @@ export default class SpeechRecognitionStatus extends React.Component {
     }
     return (
       <span className='status-icon-container'>
-        <i className={speechRecognizerStateIcon} style={style}/>
+       <i className={speechRecognizerStateIcon} style={style}/>
       </span>
     );
   }
@@ -72,12 +87,13 @@ export default class SpeechRecognitionStatus extends React.Component {
     const classes = classnames('status-details', {
       'without-context': !this.props.contextName
     });
+    const showText = !this.props.sleeping && (this.props.contextName || this.props.text);
     return (
       <div className='speech-recognition-status compact'>
         {this.speechRecognitionIcon()}
         <span className={classes}>
           {this.speechRecognitionContext()}
-          {(this.props.contextName || this.props.text) && this.speechRecognitionText()}
+          {showText && this.speechRecognitionText()}
         </span>
       </div>
     );

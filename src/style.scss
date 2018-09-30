@@ -98,6 +98,25 @@
           color: #C93B2A;
         }
       }
+
+      &.sleeping {
+        i {
+          color: #CCC;
+        }
+        .first {
+          position: absolute;
+          top: 11px;
+          left: 21px;
+          font-size: 12px;
+          color: #888;
+        }
+        .second {
+          position: absolute;
+          top: -1px;
+          left: 27px;
+          font-size: 16px;
+        }
+      }
     }
 
     .status-details {

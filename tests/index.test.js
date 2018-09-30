@@ -11,7 +11,8 @@ const defaultProps = {
   connecting: false,
   recording: true,
   final: false,
-  text: 'foo'
+  text: 'foo',
+  sleeping: false
 };
 
 function render(props = {}) {
@@ -104,6 +105,15 @@ describe('speech recognition status component', () => {
   it('should render compact view', function() {
     const el = render({
       compact: true
+    });
+
+    expect(el).toMatchSnapshot();
+  });
+
+  it('should render sleeping compact view', function() {
+    const el = render({
+      compact: true,
+      sleeping: true
     });
 
     expect(el).toMatchSnapshot();
